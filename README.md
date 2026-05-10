@@ -17,5 +17,6 @@
   23-04-2026
 
   ## Progress
-  - Day 1  — Environment set up, Git configured, first commit pushed
-  - Day 2  - Built first HTML clinic page
+  - Day 1 - Environment set up, Git configured, first commit pushed
+  - Day 2 - Built first HTML clinic info page
+  - Day 3 - Added CSS Styling to clinic info page
