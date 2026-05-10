@@ -18,3 +18,4 @@
 
   ## Progress
   - Day 1  — Environment set up, Git configured, first commit pushed
+  - Day 2  - Built first HTML clinic page
