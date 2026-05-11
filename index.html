@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Mensah Health Clinic</title>
   </head>
   <body>
@@ -14,9 +15,14 @@
 
     <!-- Navigation Section -->
     <nav>
-      <a href="#about">About Us</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <div class="nav-container">
+        <div class="nav-logo"><span>🏥</span> Mensah Clinic</div>
+        <div class="nav-links">
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </nav>
 
     <!--About Section-->
@@ -33,15 +39,38 @@
     <!-- Services Section -->
     <section id="services">
       <h2>Our Services</h2>
-      <ul>
-        <li>General Outpatient Consultation</li>
-        <li>Antenatal and Postnatal Care</li>
-        <li>Child Health and Immunization</li>
-        <li>Hypertension and Diabetes Management</li>
-        <li>Minor Surgical Procedures</li>
-        <li>Laboratory Services</li>
-        <li>Pharmacy Services</li>
-      </ul>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🩺</div>
+          <h3>General Consultation</h3>
+          <p>Comprehensive outpatient assessment for adults and children.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🤰</div>
+          <h3>Maternal Health</h3>
+          <p>Antenal, delivery support and postnatal care.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💊</div>
+          <h3>Pharmacy</h3>
+          <p>Dispensing and medication counseling on-site.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🩸</div>
+          <h3>Laboratory</h3>
+          <p>Full blood workup, malaria testing, urinalysis and more.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💉</div>
+          <h3>Immunization</h3>
+          <p>Childhood and adult vaccination programs</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🫀</div>
+          <h3>Chronic Disease</h3>
+          <p>Hypertension, diabetes and asthma long-term management.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
