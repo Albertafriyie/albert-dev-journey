@@ -20,3 +20,4 @@
   - Day 1 - Environment set up, Git configured, first commit pushed
   - Day 2 - Built first HTML clinic info page
   - Day 3 - Added CSS Styling to clinic info page
+  - Day 4: Flexbox navbar and 3-column services section
