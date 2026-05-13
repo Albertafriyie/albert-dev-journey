@@ -27,3 +27,4 @@ Learning: HTML → CSS → JavaScript → React → Node.js → Next.js
 - Day 3 - Added CSS Styling to clinic info page
 - Day 4: Flexbox navbar and 3-column services section
 - Day 5: Added Grid CSS layout and full mobile responsiveness
+- Day 6: ## Live Projects - [Mensah Health Clinic Demo] (https://albert-clinic-demo.netlify.app)
