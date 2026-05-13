@@ -26,3 +26,4 @@ Learning: HTML → CSS → JavaScript → React → Node.js → Next.js
 - Day 2 - Built first HTML clinic info page
 - Day 3 - Added CSS Styling to clinic info page
 - Day 4: Flexbox navbar and 3-column services section
+- Day 5: Added Grid CSS layout and full mobile responsiveness
