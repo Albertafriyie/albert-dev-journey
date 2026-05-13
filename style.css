@@ -160,3 +160,55 @@ footer {
   font-size: 0.875rem;
   margin-top: 60px;
 }
+
+/* ===== DEFAULT STYLES (DESKTOP) ===== */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ===== TABLET: SCREENS 768PX OR LESS ===== */
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 calc(50% - 20px); /* 2 columns on mobile */
+  }
+}
+
+/* ===== MOBILE: SCREENS 480PX OR LESS ===== */
+@media (max-width: 480px) {
+  .service-card {
+    flex: 1 1 100%; /* 1 column on mobile */
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+/* ===== OVERALL PAGE BODY ===== */
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+
+main {
+  padding: 20px;
+}
