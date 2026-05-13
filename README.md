@@ -1,23 +1,28 @@
 # Albert Afriyie's Developer Journey 🏥💻
 
-  ## Who I Am
-  I am a Physician Assistant (PA) from Ghana transitioning into 
-  Full-Stack HealthTech Development. My goal is to build software 
-  that solves real clinical problems I have encountered firsthand 
-  and apply that knowledge to land other gigs beyond Healthtech.
+## Who I Am
 
-  ## My Goal
-  Become a professional Full-Stack Developer specializing in 
-  HealthTech within 365 days.
+I am a Physician Assistant (PA) from Ghana transitioning into
+Full-Stack HealthTech Development. My goal is to build software
+that solves real clinical problems I have encountered firsthand
+and apply that knowledge to land other gigs beyond Healthtech.
 
-  ## My Stack
-  Learning: HTML → CSS → JavaScript → React → Node.js → Next.js
+## My Goal
 
-  ## Start Date
-  23-04-2026
+Become a professional Full-Stack Developer specializing in
+HealthTech within 365 days.
 
-  ## Progress
-  - Day 1 - Environment set up, Git configured, first commit pushed
-  - Day 2 - Built first HTML clinic info page
-  - Day 3 - Added CSS Styling to clinic info page
-  - Day 4: Flexbox navbar and 3-column services section
+## My Stack
+
+Learning: HTML → CSS → JavaScript → React → Node.js → Next.js
+
+## Start Date
+
+23-04-2026
+
+## Progress
+
+- Day 1 - Environment set up, Git configured, first commit pushed
+- Day 2 - Built first HTML clinic info page
+- Day 3 - Added CSS Styling to clinic info page
+- Day 4: Flexbox navbar and 3-column services section
