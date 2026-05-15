@@ -4,6 +4,38 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px - body text */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem; /* 36px */
+  --text-5xl: 3rem; /* 48px */
+}
+
+:root {
+  /* Brand Colors */
+  --color-primary: #005eb8; /* NHS-inspired medical blue */
+  --color-primary-dark: #003f88;
+  --color-primary-light: #e8f0fb;
+
+  /* Semantic Colors */
+  --color-success: #16a34a; /* Green for success messages */
+  --color-warning: #d97706; /* Amber for caution messages */
+  --color-danger: #dc2626; /* Red for error/critical messages */
+  --color-info: #0284c7; /* Teal for informational messages */
+
+  /* Neutral Colors */
+  --color-text: #1a202c;
+  --color-text-muted: #718096;
+  --color-border: #e2e8f0;
+  --color-bg: #f8fafc;
+  --color-white: #ffffff;
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f0f4f8;
