@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Intake Form - Mensah Health Clinic</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header">
+        <h1>🏥 Patient Intake Form</h1>
+        <p>Mensah Health Clinic - Kumasi, Ghana</p>
+        <p class="form-notice">
+          All information is confidential and protected under Ghana's Data
+          Protection Act 2012 (Act 843).
+        </p>
+      </div>
+      <form id="patient-form" novalidate>
+        <!--section 1: personal information-->
+        <fieldset>
+          <legend>Section 1: Personal information</legend>
+          <div class="form-group">
+            <label for="full-name"
+              >Full Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              placeholder="e.g. Kwame Mensah Asante"
+              required
+              maxlength="100"
+              autocomplete="name"
+            />
+            <span class="error-message" id="full-name-error"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dob"
+                >Date of Birth <span class="required">*</span></label
+              >
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                required
+                max="2010-01-01"
+              />
+              <span class="error-message" id="dob-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender <span class="required">*</span></label>
+              <select name="gender" id="gender" required>
+                <option value="">--Select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+              </select>
+              <span class="error-message" id="gender-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone"
+                >Phone Number <span class="required">*</span></label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. 0244123456"
+                required
+                pattern="[0-9]{10}"
+                maxlength="10"
+                autocomplete="off"
+              />
+              <span class="hint">10-digit Ghana mobile number</span>
+              <span class="error-message" id="phone-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="kwame@example.com"
+                autocomplete="off"
+              />
+              <span class="hint">Optional</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address"
+              >Residential Address <span class="required">*</span></label
+            >
+            <textarea
+              id="address"
+              name="address"
+              rows="2"
+              placeholder="House number, street, town/city"
+              required
+              maxlength="200"
+            ></textarea>
+            <span class="error-message" id="address-error"></span>
+          </div>
+        </fieldset>
+
+        <!--section 2: medical information-->
+        <fieldset>
+          <legend>Section 2: Medical Information</legend>
+
+          <div class="form-group">
+            <label>Blood Type</label>
+            <div class="radio-group" role="group" aria-label="Blood Type">
+              <label class="radio-label"
+                ><input type="radio" name="blood-type" value="A+" />A+</label
+              >
+              <label class="radio-label"
+                ><input type="radio" name="blood-type" value="A-" />A-</label
+              >
+              <label class="radio-label"
+                ><input type="radio" name="blood-type" value="B+" />B+</label
+              >
+              <label class="radio-label"
+                ><input type="radio" name="blood-type" value="B-" />B-</label
+              >
+              <label class="radio-label"
+                ><input type="radio" name="blood-type" value="AB+" />AB+</label
+              >
+              <label class="radio-label"
+                ><input type="radio" name="blood-type" value="AB-" />AB-</label
+              >
+              <label class="radio-label"
+                ><input type="radio" name="blood-type" value="O+" />O+</label
+              >
+              <label class="radio-label"
+                ><input type="radio" name="blood-type" value="O-" />O-</label
+              >
+              <label class="radio-label"
+                ><input
+                  type="radio"
+                  name="blood-type"
+                  value="unknown"
+                />Unknown</label
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="allergies">Known Allergies</label>
+            <div
+              class="checkbox-group"
+              role="group"
+              aria-label="Known Allergies"
+            >
+              <label class="checkbox-label"
+                ><input
+                  type="checkbox"
+                  name="allergies"
+                  value="none"
+                />None</label
+              >
+              <label class="checkbox-label"
+                ><input
+                  type="checkbox"
+                  name="allergies"
+                  value="penicillin"
+                />Penicillin</label
+              >
+              <label class="checkbox-label"
+                ><input type="checkbox" name="allergies" value="sulfa" />Sulfa
+                drugs</label
+              >
+              <label class="checkbox-label"
+                ><input
+                  type="checkbox"
+                  name="allergies"
+                  value="aspirin"
+                />Aspirin/NSAIDs</label
+              >
+              <label class="checkbox-label"
+                ><input
+                  type="checkbox"
+                  name="allergies"
+                  value="latex"
+                />Latex</label
+              >
+              <label class="checkbox-label"
+                ><input type="checkbox" name="allergies" value="contrast" />IV
+                Contrast dye</label
+              >
+              <label class="checkbox-label"
+                ><input
+                  type="checkbox"
+                  name="allergies"
+                  value="nuts"
+                />Nuts</label
+              >
+              <label class="checkbox-label"
+                ><input
+                  type="checkbox"
+                  name="allergies"
+                  value="pollen"
+                />Pollen</label
+              >
+              <label class="checkbox-label"
+                ><input type="checkbox" name="allergies" value="other" />Other
+                (please specify below)</label
+              >
+            </div>
+            <input
+              type="text"
+              name="other-allergy"
+              placeholder="Specify other allergies..."
+              style="margin-top: 8px"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="current-medications">Current Medications</label>
+            <textarea
+              id="current-medications"
+              name="current-medications"
+              rows="3"
+              placeholder="List any medications you are currently taking, including dosage and frequency. e.g. Metformin 500mg BD"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="presenting-complaint"
+              >Presenting Complaint <span class="required">*</span></label
+            >
+            <textarea
+              id="presenting-complaint"
+              name="presenting-complaint"
+              rows="4"
+              placeholder="Please describe the reason for your visit today. When did they start? How severe?..."
+              required
+              maxlength="500"
+            ></textarea>
+            <span class="error-message" id="presenting-complaint-error"></span>
+          </div>
+        </fieldset>
+
+        <!-- section 3: emergency contact information -->
+        <fieldset>
+          <legend>Section 3: Emergency Contact Information</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="emergency-name"
+                >Contact Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="emergency-name"
+                name="emergency-name"
+                required
+                placeholder="Full name of emergency contact"
+              />
+              <span class="error-message" id="emergency-name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="emergency-relationship"
+                >Relationship <span class="required">*</span></label
+              >
+              <select
+                name="emergency-relationship"
+                id="emergency-relationship"
+                required
+              >
+                <option value="">--Select--</option>
+                <option value="parent">Parent</option>
+                <option value="spouse">Spouse</option>
+                <option value="sibling">Sibling</option>
+                <option value="child">Child</option>
+                <option value="friend">Friend</option>
+                <option value="other">Other (please specify below)</option>
+              </select>
+              <span
+                class="error-message"
+                id="emergency-relationship-error"
+              ></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="emergency-phone"
+              >Emergency Contact Phone Number
+              <span class="required">*</span></label
+            >
+            <input
+              type="tel"
+              id="emergency-phone"
+              name="emergency-phone"
+              placeholder="e.g. 0244123456"
+              required
+              pattern="[0-9]{10}"
+              maxlength="10"
+            />
+            <span class="error-message" id="emergency-phone-error"></span>
+          </div>
+        </fieldset>
+
+        <!--section 4: consent-->
+        <fieldset class="consent-section">
+          <legend>Section 4: Consent</legend>
+          <div class="consent-text">
+            <p>By submitting this form, you confirm that:</p>
+            <ul>
+              <li>
+                The information provided is accurate and complete to the best of
+                your knowledge
+              </li>
+              <li>
+                You consent to your information being stored and used for your
+                medical care and treatment
+              </li>
+              <li>
+                You understand that your data is protected under the Ghana Data
+                Protection Act 2012
+              </li>
+              <li>
+                You may request to access, correct, or delete your personal data
+                at any time
+              </li>
+            </ul>
+          </div>
+
+          <div class="form-group checkbox-consent">
+            <label class="checkbox-label required-consent">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span
+                >I have read and agree to the above consent statement
+                <span class="required">*</span></span
+              >
+            </label>
+            <span class="error-message" id="consent-error"></span>
+          </div>
+        </fieldset>
+
+        <!--section 5: submission-->
+        <div class="form-actions">
+          <button type="reset" class="btn btn-secondary">Clear Form</button>
+          <button type="submit" class="btn btn-primary">
+            Submit Intake Form
+          </button>
+        </div>
+
+        <!--success message (hidden by default)-->
+        <div class="success-message" id="success-message" style="display: none">
+          <h3>✅ Form Submitted Successfully!</h3>
+          <p>
+            Thank you, your intake information has been received. Please take a
+            seat and our staff will call your name shortly.
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2026 Mensah Health Clinic. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
