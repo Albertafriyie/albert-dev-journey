@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Patient Intake Form - Mensah Health Clinic</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -17,10 +23,19 @@
     <nav>
       <div class="nav-container">
         <div class="nav-logo"><span>🏥</span> Mensah Clinic</div>
-        <div class="nav-links">
-          <a href="../index.html">About Us</a>
-          <a href="../index.html">Services</a>
-          <a href="../index.html">Home</a>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="../index.html">About Us</a>
+            <a href="../index.html">Services</a>
+            <a href="../index.html">Home</a>
+          </div>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -393,5 +408,6 @@
     <footer>
       <p>&copy; 2026 Mensah Health Clinic. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

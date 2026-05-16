@@ -32,3 +32,4 @@ Learning: HTML → CSS → JavaScript → React → Node.js → Next.js
 - Day 8: Professional typography with Google Fonts and accessible color system
 - Day 9: Added CSS animations and transitions to clinic page
 - Day 10: Complete patient intake form with DPA-compliant consent section
+- Day 11: CSS variables system + dark/light mode toggle
