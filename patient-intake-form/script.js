@@ -51,6 +51,7 @@ themeToggle.addEventListener("click", function () {
   }
 });
 
+/*
 // React to OS change
 window
   .matchMedia("(prefers-color-scheme)")
@@ -58,4 +59,4 @@ window
     if (!localStorage.getItem("theme")) {
       applyTheme(e.matches ? "dark" : "light");
     }
-  });
+  });*/
