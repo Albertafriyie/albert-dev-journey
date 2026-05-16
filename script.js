@@ -1,4 +1,4 @@
-// Dark Mode Toggle
+/*/ Dark Mode Toggle
 const html = document.documentElement; // the <html> element
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.querySelector("theme-icon");
@@ -16,7 +16,7 @@ const savedTheme = localStorage.getItem("theme");
 } else {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   if (prefersDark) applyTheme("dark");
-}*/
+}
 
 if (savedTheme) {
   html.setAttribute("data-theme", savedTheme);
@@ -35,7 +35,7 @@ if (savedTheme) {
   const newTheme = currentTheme === "dark" ? "light" : "dark";
   applyTheme(newTheme);
   localStorage.setItem("theme", newTheme);
-});*/
+});
 
 themeToggle.addEventListener("click", function () {
   const currentTheme = html.getAttribute("data-theme");
@@ -60,3 +60,15 @@ window
       applyTheme(e.matches ? "dark" : "light");
     }
   });*/
+
+const html = document.documentElement;
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.querySelector(".theme-icon");
+
+themeToggle.addEventListener("click", function () {
+  const currentTheme = html.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+  html.setAttribute("data-theme", newTheme);
+  themeIcon.textContent = newTheme === "dark" ? "☀️" : "🌙";
+});
