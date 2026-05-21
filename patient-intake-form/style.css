@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ===== TYPOGRAPHY SCALE ===== */
 :root {
   --text-xs: 0.75rem; /* 12px */

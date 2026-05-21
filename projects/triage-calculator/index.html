@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Patient Risk Triage Calculator - Mensah Health Clinic</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Mensah Health Clinic</h1>
+      <p>Compassionate Care, Modern Medicine</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+      <div class="nav-container">
+        <div class="nav-logo"><span>🏥</span> Mensah Clinic</div>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="../../index.html">About Us</a>
+            <a href="../../index.html">Services</a>
+            <a href="../../index.html">Home</a>
+          </div>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <br />
+
+    <!-- Form Section-->
+    <div class="calculator">
+      <div class="calc-header">
+        <h1>🚨 Patient Triage Risk Calculator</h1>
+        <p>Clinician Decision Support Tool - For educational use</p>
+      </div>
+
+      <div class="calc-body">
+        <div class="input-group">
+          <label for="age">Patient Age (years)</label>
+          <input
+            type="number"
+            id="age"
+            min="0"
+            max="130"
+            placeholder="e.g. 55"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="bp">Systolic Blood Pressure (mmHg)</label>
+          <input
+            type="number"
+            id="bp"
+            min="50"
+            max="300"
+            placeholder="e.g. 145"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="hr">Heart Rate (bpm)</label>
+          <input
+            type="number"
+            id="hr"
+            min="20"
+            max="300"
+            placeholder="e.g. 88"
+          />
+        </div>
+
+        <div class="checkbox-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="smoker" />Current smoker
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="diabetic" />Known Diabetic
+          </label>
+        </div>
+
+        <button id="calculate-btn">Calculate Risk Score</button>
+
+        <div class="result hidden" id="result">
+          <div class="risk-badge" id="risk-badge"></div>
+          <div class="score-display">
+            Risk Score: <span id="score-value"></span>
+          </div>
+          <p class="advice" id="advice"></p>
+          <p class="disclaimer">
+            ⚠️ This tool is for educational purposes only. Not a substitute for
+            clinical judgement.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2026 Mensah Health Clinic. All rights reserved.</p>
+    </footer>
+    <script src="triage.js"></script>
+    <script src="app.js"></script>
+    <script src="dark-mode.js"></script>
+  </body>
+</html>

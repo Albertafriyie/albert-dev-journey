@@ -105,3 +105,86 @@ text-decoration: none;
 a:hover {
 text-decoration: underline;
 }
+
+Professional standard breakpoints
+xs: < 480px - small phones
+sm: 480-767px - large phones
+md: 768-1023px - tablets
+lg: 1024-1279px - small desktops
+xl: >/= 1280px - large desktops
+
+As min-width media queries (mobile first):
+@media (min-width: 480px) {sm and above}
+@media (min-width: 768px) {md and above}
+@media (min-width: 1024px) {lg and above}
+@media (min-width: 1280px) {xl and above}
+
+Clamp(minimum, prefered, maximum)
+h1 {
+font-size: clamp(1.5rem, 4vw, 2.5rem);
+/_never smaller than 1.5rem, never larger than 2.5rem, scales with viewport width in between_/
+}
+body {
+font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+fluid images
+every image you use should be responsive by default:
+img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+/_ ===== DEFAULT STYLES (DESKTOP) ===== _/
+.services-grid {
+display: flex;
+flex-wrap: wrap;
+}
+
+/_ ===== RESPONSIVE ===== _/
+/_ TABLET: SCREENS 768PX OR LESS _/
+@media (max-width: 768px) {
+.service-card {
+flex: 1 1 calc(50% - 20px);
+}
+}
+
+/_ IPADS: SCREENS 600PX OR LESS _/
+@media (max-width: 600px) {
+.nav-container {
+flex-direction: column;
+height: auto;
+padding: 15px 0;
+gap: 10px;
+}
+
+.nav-links {
+gap: 15px;
+}
+}
+
+/_ MOBILE: SCREENS 480PX OR LESS _/
+@media (max-width: 480px) {
+.service-card {
+flex: 1 1 100%;
+}
+
+.nav-links {
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+gap: 8px;
+width: 100%;
+}
+
+.nav-links a {
+font-size: 0.8rem;
+white-space: nowrap;
+letter-spacing: -0.5px;
+}
+
+header h1 {
+font-size: 1.5rem;
+}
+}

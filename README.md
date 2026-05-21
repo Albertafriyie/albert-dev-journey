@@ -33,3 +33,4 @@ Learning: HTML → CSS → JavaScript → React → Node.js → Next.js
 - Day 9: Added CSS animations and transitions to clinic page
 - Day 10: Complete patient intake form with DPA-compliant consent section
 - Day 11: CSS variables system + dark/light mode toggle
+- Day 16: Patient Risk Triage Calculator - if/else, operators, control flow
