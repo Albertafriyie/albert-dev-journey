@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Medication List Manager - Mensah Health Clinic</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Mensah Health Clinic</h1>
+      <p>Compassionate Care, Modern Medicine</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+      <div class="nav-container">
+        <div class="nav-logo"><span>🏥</span> Mensah Clinic</div>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="../../index.html">About Us</a>
+            <a href="../../index.html">Services</a>
+            <a href="../../index.html">Home</a>
+          </div>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <!-- Medication List Section-->
+    <div class="app">
+      <header class="app-header">
+        <h1>💊 Medication List</h1>
+        <p>Patient: Kwame Asante - DOB: 15/03/1979</p>
+      </header>
+
+      <main class="app-body">
+        <form id="add-form" class="add-form">
+          <h2>Add Medications</h2>
+          <div class="form-row">
+            <input
+              type="text"
+              id="med-name"
+              placeholder="Drug name (e.g. Metformin)"
+              required
+            />
+            <input
+              type="text"
+              id="med-dose"
+              placeholder="Dose (e.g. 500mg)"
+              required
+            />
+            <select name="med-freq" id="med-freq" required>
+              <option value="">Frequency</option>
+              <option value="OD">OD (Once daily)</option>
+              <option value="BD">BD (Twice daily)</option>
+              <option value="TDS">TDS (Three times daily)</option>
+              <option value="QDS">QDS (Four times daily)</option>
+              <option value="ON">ON (At night)</option>
+              <option value="PRN">PRN (As needed)</option>
+              <option value="STAT">STAT (Immediately)</option>
+            </select>
+            <button type="submit">+ Add</button>
+          </div>
+        </form>
+
+        <section class="med-list-section">
+          <h2>Current Medications(<span id="med-count">0</span>)</h2>
+          <ul id="medication-list"></ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2026 Mensah Health Clinic. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="dark-mode.js"></script>
+  </body>
+</html>

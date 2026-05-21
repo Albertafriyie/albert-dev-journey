@@ -34,3 +34,4 @@ Learning: HTML → CSS → JavaScript → React → Node.js → Next.js
 - Day 10: Complete patient intake form with DPA-compliant consent section
 - Day 11: CSS variables system + dark/light mode toggle
 - Day 16: Patient Risk Triage Calculator - if/else, operators, control flow
+- Day 17: Medication List Manager - arrays, loops, DOM manipulation
