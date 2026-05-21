@@ -4,33 +4,19 @@
 // ===
 
 // State - the app's data lives here
-let medications = [
-  {
-    id: 1,
-    name: "Metformin",
-    dose: "500mg",
-    frequency: "BD",
-    startDate: "2026-01-15",
-  },
-  {
-    id: 2,
-    name: "Lisinopril",
-    dose: "10mg",
-    frequency: "OD",
-    startDate: "2026-02-01",
-  },
-  {
-    id: 3,
-    name: "Atorvastatin",
-    dose: "20mg",
-    frequency: "ON",
-    startDate: "2026-02-01",
-  },
-];
+// 1. LOAD: Initialize state from LocalStorage or use the default array
+let medications = JSON.parse(localStorage.getItem("myMedications")) || [];
 
-let nextId = 4; //auto-incrementing ID
+// Helper to handle auto-incrementing ID
+let nextId =
+  medications.length > 0 ? Math.max(...medications.map((m) => m.id)) + 1 : 1;
 
-// DOM references - get once, use everywhere
+// 2. SAVE: Create a function to save to storage
+function saveToStorage() {
+  localStorage.setItem("myMedications", JSON.stringify(medications));
+}
+
+// DOM references
 const medicationList = document.getElementById("medication-list");
 const addForm = document.getElementById("add-form");
 const medNameInput = document.getElementById("med-name");
@@ -74,34 +60,32 @@ function renderMedications() {
 
 // === ADD MEDICATION ===
 addForm.addEventListener("submit", function (event) {
-  event.preventDefault(); // prevent page reload
+  event.preventDefault();
 
+  // Validate
   let name = medNameInput.value.trim();
   let dose = medDoseInput.value.trim();
   let freq = medFreqInput.value;
 
   if (!name || !dose || !freq) {
-    alert("please fill in all medication details");
+    alert("Please fill in all medication details.");
     return;
   }
 
-  // Create new medication object
+  // Create and add
   let newMed = {
-    id: nextId,
+    id: nextId++,
     name: name,
     dose: dose,
     frequency: freq,
-    startDate: new Date().toISOString().split("T")[0], // today's date
+    startDate: new Date().toISOString().split("T")[0],
   };
 
-  nextId++;
-  medications.push(newMed); // add to array
-
-  // Clear form
-  addForm.requestFullscreen();
-  medNameInput.focus(); // ready for next entry
-
-  renderMedications(); // re-draw the list
+  medications.push(newMed);
+  saveToStorage();
+  addForm.reset();
+  medNameInput.focus();
+  renderMedications();
 });
 
 // === DELETE MEDICATION ===
